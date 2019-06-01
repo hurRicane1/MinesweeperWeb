@@ -2,6 +2,7 @@ function Cell() {
     this.isBomb = false;
     this.bombsAround =0;
     this.isOpen = false;
+    this.isFlag = false;
 }
 
 var minesweeper= {
@@ -139,8 +140,22 @@ var board={
             if (minesweeper.field[xC][yC].isOpen) return;
             e.target.classList.toggle("flag");
             e.preventDefault();
+            minesweeper.field[xC][yC].isFlag = !minesweeper.field[xC][yC].isFlag;
+            var flagCounter = 0; 
+            for(var y = 0; y < minesweeper.height; y++) {
+                for (var x = 0; x < minesweeper.width; x++) {
+                    if (minesweeper.field[x][y].isFlag){
+                        flagCounter++;
+                    }
+                }
+            }
+            var flags = document.getElementById("flagsCount");
+            flags.innerHTML = "Flags: "+ flagCounter;
         }
     }
+}
+function refresh(){
+    window.location.reload();
 }
 window.onload = function() {
     board.init();

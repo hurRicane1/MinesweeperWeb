@@ -8,8 +8,6 @@
          url('fonts/AmazingGroteskDemi.svg#AmazingGroteskDemi') format('svg');
 }
 
-
-
 body{
     font-family: "AmazingGroteskDemi";
     position: relative;
@@ -42,4 +40,14 @@ body{
 }
 .board tr {
     width: 50px;
+}
+#restartBtn{
+    font-family: "AmazingGroteskDemi";
+    font-size: 25px;
+    background-color: azure;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#restartBtn:hover{
+    background-color:lightblue;
 }
