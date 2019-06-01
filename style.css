@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'AmazingGroteskDemi';
+    src: url('fonts/AmazingGroteskDemi.eot');
+    src: url('fonts/AmazingGroteskDemi.eot') format('embedded-opentype'),
+         url('fonts/AmazingGroteskDemi.woff2') format('woff2'),
+         url('fonts/AmazingGroteskDemi.woff') format('woff'),
+         url('fonts/AmazingGroteskDemi.ttf') format('truetype'),
+         url('fonts/AmazingGroteskDemi.svg#AmazingGroteskDemi') format('svg');
+}
+
+
+
+body{
+    font-family: "AmazingGroteskDemi";
+    position: relative;
+    background-color: whitesmoke;
+    text-align: center;
+}
+.board {
+    display: inline-block;
+    border: 1px solid black;
+}
+.board td {
+    height: 50px;
+    width: 50px;
+    background-color: gainsboro;
+    cursor: pointer;
+}
+.board td:hover{
+    background-color: azure;
+}
+.board td.open{
+    background-color: floralwhite; 
+}
+.board td.flag{
+    background: url(img/flag.png);
+    background-size: cover;
+}
+.board td.bomb{
+    background: url(img/bomb.png);
+    background-size: cover;
+}
+.board tr {
+    width: 50px;
+}
